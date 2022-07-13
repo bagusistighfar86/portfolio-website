@@ -69,7 +69,7 @@ function PortHome() {
                 base: '2xl',
                 '2xl': '3xl',
               }}
-              zIndex="sticky"
+              zIndex="docked"
               _groupHover={{
                 bgGradient: 'linear(to-bl, #9796F0, #FBC7D4)',
                 bgClip: 'text',

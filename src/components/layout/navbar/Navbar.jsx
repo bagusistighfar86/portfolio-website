@@ -46,8 +46,13 @@ function Navbar() {
   }, [location.pathname]);
 
   return (
-    <Box py={5} w="100%" position="fixed" backgroundColor="#0A221A" zIndex="overlay">
-      <Container maxW="90%">
+    <Box py={5} w="100%" position="fixed" backgroundColor="#0A221A" zIndex="sticky">
+      <Container maxW={{
+        base: '100%',
+        sm: '95%',
+        md: '90%',
+      }}
+      >
         <Flex alignItems="center">
           <Image src={whiteLogo} h="47px" alt="Logo MBI" me={10} />
           <HStack
@@ -123,7 +128,7 @@ function Navbar() {
           <DrawerBody>
             <VStack alignItems="left" spacing={3}>
               {NavItem.map((item) => (
-                <Link as={ReachLink} key={item} to={item.path}>{item.label}</Link>
+                <Link key={item.label} as={ReachLink} to={item.path}>{item.label}</Link>
               ))}
             </VStack>
           </DrawerBody>
